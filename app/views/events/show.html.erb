@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stroke:</strong>
+  <%= @event.stroke %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @event.distance %>
+</p>
+
+<p>
+  <strong>Ccs time:</strong>
+  <%= @event.ccs_time %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

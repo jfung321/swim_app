@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Event Times</h1>
+
+<h2> Butterfly </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>User</th>
+      <th>Event</th>
+      <th>Time off CCS</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_times.butterfly.best_times.each do |event_time| %>
+      <tr>
+        <td><%= event_time.time %> seconds </td>
+        <td><%= event_time.user.name %></td>
+        <td><%= event_time.event.distance %> <%= event_time.event.stroke %></td>
+        <td><%= event_time.time_difference %> seconds</td> 
+        <td><%= link_to 'Show', event_time %></td>
+        <td><%= link_to 'Edit', edit_event_time_path(event_time) %></td>
+        <td><%= link_to 'Destroy', event_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h2> Backstroke </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>User</th>
+      <th>Event</th>
+      <th>Time off CCS</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_times.backstroke.best_times.each do |event_time| %>
+      <tr>
+        <td><%= event_time.time %> seconds </td>
+        <td><%= event_time.user.name %></td>
+        <td><%= event_time.event.distance %> <%= event_time.event.stroke %></td>
+        <td><%= event_time.time_difference %> seconds</td> 
+        <td><%= link_to 'Show', event_time %></td>
+        <td><%= link_to 'Edit', edit_event_time_path(event_time) %></td>
+        <td><%= link_to 'Destroy', event_time, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event Time', new_event_time_path %>

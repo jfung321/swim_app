@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stroke: MyString
+  distance: 1
+  ccs_time: 1.5
+
+two:
+  stroke: MyString
+  distance: 1
+  ccs_time: 1.5
